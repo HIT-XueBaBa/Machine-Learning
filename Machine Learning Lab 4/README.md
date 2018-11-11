@@ -1,4 +1,4 @@
-#Machine Learning Lab 4  
+#Machine-Learning-Lab-4  
 以下四个文件属于MNIST数据集：  
 train-images.idx3-ubyte  
 train-labels.idx1-ubyte  
