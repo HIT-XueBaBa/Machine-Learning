@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{CJKutf8}
+\usepackage{hyperref}
 \usepackage[namelimits]{amsmath} %数学公式
 \usepackage{amssymb}             %数学公式
 \usepackage{amsfonts}            %数学字体
@@ -57,7 +58,7 @@
 \end{algorithm}
 
 \section{EM算法}
-未观测变量的学名式“隐变量”(latent variable)。令$X$表示已观测变量集，\\$Z$表示隐变量集，$\Theta$表示模型参数。若欲对$\Theta$做极大似然估计，则应最大化对数似然$$LL(\Theta|X,Z)=lnP(X,Z|\Theta)\eqno{(2)}$$然而由于$Z$是隐变量，上式无法直接求解。此时我们可通过对$Z$计算期望，来最大化已观测数据的对数“边际似然”(marginal likelihood)$$LL(\Theta|X)=lnP(X|\Theta)=ln\sum_ZP(X,Z|\Theta)\eqno{(3)}$$
+未观测变量的学名是“隐变量”(latent variable)。令$X$表示已观测变量集，\\$Z$表示隐变量集，$\Theta$表示模型参数。若欲对$\Theta$做极大似然估计，则应最大化对数似然$$LL(\Theta|X,Z)=lnP(X,Z|\Theta)\eqno{(2)}$$然而由于$Z$是隐变量，上式无法直接求解。此时我们可通过对$Z$计算期望，来最大化已观测数据的对数“边际似然”(marginal likelihood)$$LL(\Theta|X)=lnP(X|\Theta)=ln\sum_ZP(X,Z|\Theta)\eqno{(3)}$$
 \par
 EM(Expectation-Maximization)算法[Dempster et al.,1977]是常用的估计隐变量的利器，它是一种迭代式的方法，其基本想法是：若参数$\Theta$已知，则可根据训练数据推断出最优隐变量$Z$的值(E步)；反之，若$Z$的值已知，则可以方便的对参数$\Theta$做极大似然估计(M步)
 \par
